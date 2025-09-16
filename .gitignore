@@ -39,3 +39,68 @@
 
 # debug information files
 *.dwo
+
+
+## CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
+cmake-build-*/
+
+# Build folders / common output
+bin/
+obj/
+lib/
+dist/
+release/
+debug/
+*.stackdump
+
+# IDE / editors
+.vscode/
+*.code-workspace
+.vscode/*.code-workspace
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.vcxproj.user
+*.db
+
+# JetBrains (CLion, etc.)
+.idea/
+*.iml
+/.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim / Emacs
+*~ 
+*.swp
+*.swo
+.session
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Coverage
+coverage/
+*.lcov
+
+# Misc
+*.class
