@@ -1,36 +1,33 @@
 #include <iostream>
-#include <cstdlib>  // para rand() y srand()
-#include <ctime>    // para time()
+#include <cstdlib>  // Para rand() y srand()
+#include <ctime>    // Para time()
+
 using namespace std;
 
-int main(){
-    srand(time(0)); //inicializa la semilla aleatoria UNA sola vez
+int main() {
+    // Inicializamos la semilla aleatoria UNA sola vez
+    srand(time(0));
     
-    // usammos arrays multidimensionales para almaccenar fechas
-    // horas - dias - meses
-
+    // Usamos un array tridimensional para almacenar la cantidad de coches
+    // pasoCoches[hora][día][mes]
     int pasoCoches[24][31][12];
 
-    //Ciclo for  anidados en las tres dimensiones
-
-    for(int i = 0; i < 24; i++){
-
-        for(int j = 0; j < 31; j++ ){
-
-            for(int z = 0; z < 12; z++){
-
-                pasoCoches[i][j][z]= (rand() % 1000) + 1;  // valores entre 1 y 1000
-;
-
+    // Ciclos for anidados en las tres dimensiones
+    for (int i = 0; i < 24; i++) {         // Horas
+        for (int j = 0; j < 31; j++) {     // Días
+            for (int z = 0; z < 12; z++) { // Meses
+                // Valores entre 1 y 1000
+                pasoCoches[i][j][z] = (rand() % 1000) + 1;  
             }
         }
     }
 
-    // 7 de noviembre a las 19:00
+    // Ejemplo: 7 de noviembre a las 19:00
+    // Nota: los índices comienzan en 0 → día 7 = índice 6, mes 11 = índice 10
+    int datos = pasoCoches[19][6][10];
 
-    int datos = pasoCoches[19][06][10];
+    cout << endl << "Los coches que pasaron el 7 de noviembre a las 19:00 fueron: " 
+            << datos << endl;
 
-    cout << endl << "Los numeros de coches que pasaron el 7 de noviembre a las 19:00 fueron: " << datos << endl;
-
-    return(0);
+    return 0;
 }
